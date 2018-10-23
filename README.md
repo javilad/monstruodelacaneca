@@ -1,3 +1,3 @@
 # monstruodelacaneca
 Monstruo de la caneca
-Alvaro Carmona
+Alvaro Ernesto Carmona Ruiz
