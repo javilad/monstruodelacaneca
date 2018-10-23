@@ -1,7 +1,9 @@
 # monstruodelacaneca
 Monstruo de la caneca
-Alvaro Carmona
-Ana Borda Montañez
+
+Javier Ladino
+Alvaro Ernesto Carmona Ruiz
+Ana Borda
 
 
 Cambio de Ana
