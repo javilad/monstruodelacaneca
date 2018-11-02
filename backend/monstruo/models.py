@@ -23,6 +23,8 @@ class Reciclador(models.Model):
     def __str__(self):
         return self.alias
 
+
+
 class TipoUso(models.Model):
     nombre = models.CharField(max_length = 20) # Tipo de uso, Hogares, Comercial, Institucional, Industrial, Majeno especial
     descripcion = models.CharField(max_length = 500)
@@ -55,4 +57,4 @@ class Partida(models.Model):
    niveldesbloqueado = models.IntegerField() # Nivel al que llegó
    fecha = models.DateTimeField(auto_now = True) # Fecha del juego
    def __str__(self):
-        return self.reciclador 
+        return str(self.fecha) 

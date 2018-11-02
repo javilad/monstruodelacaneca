@@ -4,18 +4,18 @@ from django.contrib.auth.models import User
 
 class RecicladorSerializer(serializers.ModelSerializer):
     username = serializers.CharField(write_only=True, source="user.username")
+    nivelActual = serializers.IntegerField(required=False)
     password = serializers.CharField(write_only=True,source="user.password")
     alias = serializers.CharField(required=False)
     correo = serializers.CharField(required=False)
     imagen = serializers.ImageField(required=False)
     monedas = serializers.IntegerField(required=False)
     puntos = serializers.IntegerField(required=False)
-    nivelActual = serializers.IntegerField(required=False)
     tipoReciclador = serializers.CharField(required=False)
  
     class Meta:
         model = User
-        fields = ('id', 'username', 'password','alias','correo','imagen','monedas','puntos','nivelActual','tipoReciclador')
+        fields = ('id', 'username', 'password','alias','tipoReciclador','correo','imagen','monedas','puntos','nivelActual')
     def create(self, validated_data, instance=None):
         user_data = validated_data.pop('user')
         user = User.objects.create(**user_data)
