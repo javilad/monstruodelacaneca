@@ -5,14 +5,14 @@ from django.utils.html import format_html
 # Register your models here.
 
 
-class ResiduoInline(admin.StackedInline):
-    model = Residuo
-    extra = 3
+# class ResiduoInline(admin.StackedInline):
+#     model = Residuo
+#     extra = 3
 
-class CanecaAdmin(admin.ModelAdmin):
-    inlines = [ResiduoInline]
-    list_display = ('nombre','tipoUso', 'imagen')
-    list_filter = ['tipoUso']
+# class CanecaAdmin(admin.ModelAdmin):
+#     inlines = [ResiduoInline]
+#     list_display = ('nombre','tipoUso', 'imagen')
+#     list_filter = ['tipoUso']
 
 
 class PartidaInline(admin.TabularInline):
@@ -37,5 +37,7 @@ admin.site.register(TipoUso)
 admin.site.register(Reciclador,RecicladorAdmin )
 admin.site.register(Partida)
 
-admin.site.register(Caneca, CanecaAdmin)
+#admin.site.register(Caneca, CanecaAdmin)
+admin.site.register(Caneca)
 admin.site.register(Residuo)
+admin.site.register(Nivel)

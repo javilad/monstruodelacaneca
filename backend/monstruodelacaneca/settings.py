@@ -28,7 +28,7 @@ SECRET_KEY = 'ggb9yy)#e(nasjhvriz@tgh0*w5j41=m$4%8n0n25&ix#9(k)m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -91,6 +91,17 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'aecarmona$monstruo',
+#         'USER': 'aecarmona',
+#         'PASSWORD': 'Aranda123456',
+#         'HOST': 'aecarmona.mysql.pythonanywhere-services.com',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation

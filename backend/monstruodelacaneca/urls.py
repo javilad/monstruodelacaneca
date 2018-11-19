@@ -25,7 +25,7 @@ from django.conf.urls import url, include
 urlpatterns = staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns = [
+urlpatterns += [
     path('admin/', admin.site.urls),
     path('home/', views.home),
     url(r'^', include(('monstruo.urls','recicladores'))),

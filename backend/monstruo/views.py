@@ -6,6 +6,7 @@ from rest_framework import generics
 from monstruo.serializers import *
 from rest_framework.decorators import permission_classes
 
+
 # TODO revisar ranking de usuarios con ViewSets
 
 # Create your views here.
@@ -16,6 +17,11 @@ def home(request):
 class RecicladorList(generics.ListCreateAPIView):
     serializer_class = RecicladorSerializer
     queryset = Reciclador.objects.all()
+
+
+class RecicladorList10(generics.ListCreateAPIView):
+    serializer_class = RecicladorSerializer
+    queryset = Reciclador.objects.order_by('-puntos')[:10]
 
 class RecicladorDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = RecicladorSerializer
@@ -47,7 +53,7 @@ class CanecaDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class ResiduoList(generics.ListCreateAPIView):
     serializer_class = ResiduoSerializer
-    queryset = Residuo.objects.all()
+    queryset = Residuo.objects.order_by('?')[:50]
 
 class ResiduoDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ResiduoSerializer
@@ -60,3 +66,11 @@ class PartidaList(generics.ListCreateAPIView):
 class PartidaDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PartidaSerializer
     queryset = Partida.objects.all()           
+
+class NivelList(generics.ListCreateAPIView):
+    serializer_class = NivelSerializer
+    queryset = Nivel.objects.all()
+
+class NivelDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = NivelSerializer
+    queryset = Nivel.objects.all()      
