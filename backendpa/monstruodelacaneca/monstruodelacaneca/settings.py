@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'monstruo'
+    'rest_framework',    
+    'rest_framework.authtoken',
+    'rest_auth',
+    'monstruo', 
+    'corsheaders', 
 ]
 
 MIDDLEWARE = [
@@ -128,9 +132,9 @@ STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = u'/home/aecarmona/monstruodelacaneca/media'
+MEDIA_ROOT = u'/home/aecarmona/monstruodelacaneca/backendpa/monstruodelacaneca/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/aecarmona/monstruodelacaneca/static'
+STATIC_ROOT = u'/home/aecarmona/monstruodelacaneca/backendpa/monstruodelacaneca/static'
 STATIC_URL = '/static/'
 
 
